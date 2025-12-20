@@ -1,0 +1,41 @@
+# ROS 2 build artifacts
+**/build/
+**/install/
+**/log/
+
+# Python
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+
+# C/C++ build artifacts
+**/*.o
+**/*.obj
+**/*.a
+**/*.lib
+**/*.so
+**/*.dll
+**/*.dylib
+**/*.exe
+**/*.out
+**/*.elf
+**/*.map
+
+# HDL / FPGA generated
+**/*.jou
+**/*.log
+**/*.str
+**/*.pb
+**/*.dcp
+**/*.rpt
+**/*.xpr
+**/*.cache/
+**/*.runs/
+**/*.ip_user_files/
+**/*.sim/
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

@@ -1,0 +1,64 @@
+Visualization Manager:
+  Class: ""
+  Name: root
+  Displays:
+    - Class: rviz_default_plugins/RobotModel
+      Name: RobotModel
+      Enabled: true
+      Robot Description: /robot_description
+      Alpha: 1
+      Update Interval: 0.0
+    - Class: rviz_default_plugins/Grid
+      Name: Grid
+      Enabled: true
+      Cell Size: 0.1
+      Plane: XY
+      Color: 160; 160; 160
+    - Class: rviz_default_plugins/LaserScan
+      Name: LaserScan
+      Enabled: true
+      Topic: /scan
+      Queue Size: 10
+      Color: 255; 0; 0
+      Size (m): 0.03
+      Style: Points
+      Decay Time: 0.0
+      Channel Transformer: Intensity
+    - Class: rviz_default_plugins/TF
+      Name: TF
+      Enabled: true
+      Show Names: true
+      Show Arrows: true
+      Show Axes: true
+      Marker Scale: 1.0
+  Enabled: true
+  Global Options:
+    Background Color: 48; 48; 48
+    Fixed Frame: base_footprint
+    Frame Rate: 30
+  Tools:
+    - Class: rviz_default_plugins/Interact
+    - Class: rviz_default_plugins/MoveCamera
+    - Class: rviz_default_plugins/Select
+    - Class: rviz_default_plugins/FocusCamera
+    - Class: rviz_default_plugins/Measure
+    - Class: rviz_default_plugins/SetInitialPose
+    - Class: rviz_default_plugins/SetGoal
+  Tool Properties:
+    SetInitialPose:
+      Theta std deviation: 0.2618
+      X std deviation: 0.5
+      Y std deviation: 0.5
+    SetGoal:
+      Orientation Tolerance: 0.1
+      Position Tolerance: 0.1
+      Timeout: 15.0
+  Views:
+    Current:
+      Class: rviz_default_plugins/Orbit
+      Distance: 2.5
+      Focal Point: 0; 0; 0
+      Pitch: 0.785
+      Yaw: 0.785
+      Target Frame: base_footprint
+
