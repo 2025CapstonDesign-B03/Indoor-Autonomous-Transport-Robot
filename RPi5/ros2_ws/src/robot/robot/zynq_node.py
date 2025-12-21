@@ -30,7 +30,7 @@ class ZynqPacket(Node):
         self.Wbx = 0.0
         self.w = 0.316  # fixed(origin): 0.345
         
-        # 🚨 변수 초기화: 오도메트리 계산용
+        # 변수 초기화: 오도메트리 계산용
         self.x = 0.0
         self.y = 0.0
         self.theta = 0.0
@@ -39,7 +39,7 @@ class ZynqPacket(Node):
         self.last_wz = 0.0
 
         
-        # 🚨 엔코더 값 저장용 변수 추가
+        # 엔코더 값 저장용 변수 추가
         self.current_enc_L = 0
         self.current_enc_R = 0
         self.prev_enc_L = 0
@@ -139,7 +139,7 @@ class ZynqPacket(Node):
         except Exception as e:
             self.get_logger().debug(f"[HANDLE PACKET ERROR] {e} | raw={packet}")
     
-    # 🚨 오도메트리 계산을 ENC 데이터 수신 시점으로 옮김
+    # 오도메트리 계산을 ENC 데이터 수신 시점으로 옮김
     def handle_enc(self, fields):
         try:
             enc_L = int(fields[0], 10)
@@ -158,7 +158,7 @@ class ZynqPacket(Node):
                 
             self.get_logger().debug(f"Received ENC: enc_L={enc_L}, enc_R={enc_R}")
             
-            # 🚨 패킷이 올 때마다 오도메트리 계산 및 발행
+            # 패킷이 올 때마다 오도메트리 계산 및 발행
             self.process_enc()
 
         except ValueError:
@@ -230,7 +230,7 @@ class ZynqPacket(Node):
             #self.get_logger().info(f"[distance] w: {self.theta:.3f}")
         
         
-            # 🚨 joint_state 메시지 발행
+            # joint_state 메시지 발행
             TICK_TO_RAD = 2 * math.pi / TICKS_PER_REV_EQ
             self.joint_angle_L += delta_L * TICK_TO_RAD
             self.joint_angle_R += delta_R * TICK_TO_RAD
@@ -255,7 +255,7 @@ class ZynqPacket(Node):
         joint_msg.position = [jl, jr]
         self.joint_pub.publish(joint_msg)
 
-        # 🚨 Odometry 및 TF 메시지 발행
+        # Odometry 및 TF 메시지 발행
         odom_msg = Odometry()
         odom_msg.header.stamp = now.to_msg()
         odom_msg.header.frame_id = "odom"
