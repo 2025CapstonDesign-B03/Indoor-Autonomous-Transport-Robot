@@ -40,8 +40,8 @@ Raspberry Pi 5에서 실행되는 주요 개발 노드는 다음과 같습니다
 - mode_gui: Tkinter 기반의 사용자 모드(자율주행/추적) 선택 인터페이스.
 
 > Special Configuration: sllidar_ros2
-본 프로젝트에서는 LiDAR 드라이버인 sllidar_ros2 패키지를 커스텀하여 사용했습니다.
-Modification: view_sllidar_a1_launch.py 파일 내의 출력 토픽명을 센서 퓨전 노드와의 호환을 위해 **scan_merged**로 수정하여 적용하였습니다.
+> 본 프로젝트에서는 LiDAR 드라이버인 sllidar_ros2 패키지를 커스텀하여 사용했습니다.
+> Modification: view_sllidar_a1_launch.py 파일 내의 출력 토픽명을 센서 퓨전 노드와의 호환을 위해 **scan_merged**로 수정하여 적용하였습니다.
 
 ### 결과물
 - GUI: 목적지(호실) 선택 및 로봇 상태 실시간 모니터링.
