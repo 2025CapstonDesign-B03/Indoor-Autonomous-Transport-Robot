@@ -35,7 +35,6 @@ by moka
 > ROS 2 Node Structure
 Raspberry Pi 5에서 실행되는 주요 개발 노드는 다음과 같습니다:
 
-<img width="6656" height="3520" alt="image" src="https://github.com/user-attachments/assets/7da94842-278d-4364-9bb2-002bb68190c7" />
 
 - zynq_node: Cora Z7과 UART 통신을 통해 속도 명령 전달 및 엔코더/초음파 데이터 수집.
 - merge_lidar_ultrasonic_node: LiDAR와 초음파 센서 데이터를 병합하여 /scan_merged 토픽 발행.
